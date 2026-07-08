@@ -59,7 +59,7 @@ optional = true
 [tool.poetry.group.ml.dependencies]
 spacy = "^3.8"          # Documentation Processing Agent NER/dependency pipeline
 scikit-learn = "^1.5"   # Usage Feedback Agent success-probability estimator
-xgboost = "^2.1"        # Version Coherence Agent conflict classifier
+xgboost = "^3.2"        # Version Coherence Agent conflict classifier
 
 [tool.poetry.group.observability]
 optional = true
