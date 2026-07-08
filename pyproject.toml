@@ -35,7 +35,7 @@ openai = "^1.50"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^9.1"
-pytest-cov = "^5.0"
+pytest-cov = "^7.1"
 mypy = "^1.10"
 black = "^26.5"
 flake8 = "^7.0"
@@ -65,7 +65,7 @@ xgboost = "^3.2"        # Version Coherence Agent conflict classifier
 optional = true
 
 [tool.poetry.group.observability.dependencies]
-prometheus-client = "^0.20"  # magma.core.utils.metrics; lazy-imported, falls back to a no-op without it
+prometheus-client = "^0.25"  # magma.core.utils.metrics; lazy-imported, falls back to a no-op without it
 
 [tool.poetry.group.web]
 optional = true
