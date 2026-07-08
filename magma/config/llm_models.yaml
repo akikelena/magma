@@ -1,0 +1,15 @@
+# Provider/model mapping. `alias` is what config/agents.yaml references.
+default:
+  provider: anthropic
+  model: claude-sonnet-4-5
+  temperature: 0.0
+
+change_classifier:
+  provider: anthropic
+  model: claude-sonnet-4-5
+  temperature: 0.0
+
+mock:
+  provider: mock
+  model: mock-echo
+  temperature: 0.0

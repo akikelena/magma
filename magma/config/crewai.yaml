@@ -1,0 +1,36 @@
+# CrewAI Agent/Crew attribute overrides. Keys match the phase
+# each build_phaseN_crew() constructs a crewai.Agent for; `crew` configures
+# the composed Crew that magma_crew.build_magma_crew() builds. Any field
+# left out here falls back to CrewAgentSettings/CrewSettings defaults in
+# magma/crewai_agents/settings.py.
+
+phase1:
+  max_iter: 20
+  max_retry_limit: 2
+  cache: true
+  respect_context_window: true
+
+phase2:
+  max_iter: 25          # plans + generates one artifact per affected template
+  max_retry_limit: 2
+  cache: true
+  respect_context_window: true
+
+phase3:
+  max_iter: 20
+  max_execution_time: 120   # bounds the sandboxed functional-validator subprocess chain
+  max_retry_limit: 2
+  cache: true
+  respect_context_window: true
+
+phase4:
+  max_iter: 15
+  max_retry_limit: 2
+  cache: true
+  respect_context_window: true
+
+crew:
+  verbose: false
+  memory: false
+  cache: true
+  planning: false

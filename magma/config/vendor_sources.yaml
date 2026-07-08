@@ -1,0 +1,34 @@
+# Real vendor documentation entry points for the five VDBMSs MAGMA's
+# published evaluation targets (Milvus, Weaviate, Pinecone, Qdrant,
+# Chroma). Consumed by magma.phase1_documentation_detection.document_source
+# via magma.core.utils.config.load_config(); a matching Python-level
+# default (DEFAULT_VENDOR_DOC_SOURCES) covers library/test use when no
+# config directory is loaded.
+#
+# `requires_js_rendering: true` means the page is a client-rendered SPA
+# and a plain HTTP GET will not return the real article body (verified:
+# Qdrant's docs site returns an empty shell without executing JavaScript).
+# HttpDocumentFetcher still attempts the fetch and reports the result as
+# a placeholder rather than silently treating an empty page as "no
+# change" -- callers needing real content for that vendor must supply a
+# browser-rendering DocumentFetcher implementation instead.
+milvus:
+  url: https://milvus.io/docs/single-vector-search.md
+  description: "Milvus ANN search reference"
+
+weaviate:
+  url: https://docs.weaviate.io/weaviate/search/similarity
+  description: "Weaviate similarity search reference"
+
+pinecone:
+  url: https://docs.pinecone.io/guides/search/search-overview
+  description: "Pinecone search overview reference"
+
+qdrant:
+  url: https://qdrant.tech/documentation/concepts/search/
+  description: "Qdrant search concepts reference"
+  requires_js_rendering: true
+
+chroma:
+  url: https://docs.trychroma.com/docs/querying-collections/query-and-get
+  description: "Chroma query/get reference"

@@ -1,0 +1,27 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    groups:
+      # Batch the heavy optional groups so a spacy/crewai/xgboost update
+      # doesn't open a dozen individual PRs for their transitive deps.
+      ml-and-crewai:
+        patterns:
+          - "spacy*"
+          - "scikit-learn*"
+          - "xgboost*"
+          - "crewai*"
+          - "thinc*"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"

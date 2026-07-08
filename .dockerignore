@@ -1,0 +1,16 @@
+.git/
+.github/
+.pytest_cache/
+.mypy_cache/
+htmlcov/
+.coverage
+__pycache__/
+*.pyc
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+magma/tests/
+docs/
+.env
