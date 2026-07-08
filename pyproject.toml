@@ -28,7 +28,7 @@ magma = "magma.scripts.run_workflow:main"
 python = ">=3.10,<3.14"  # crewai (optional group) caps at <3.14; keeping the project range in sync avoids solver failures
 pyyaml = "^6.0"
 neo4j = "^5.0"
-weaviate-client = "^4.0"
+weaviate-client = "^4.22"
 numpy = ">=1.26,<3.0"  # loose upper bound: spacy 3.8/thinc need numpy 2.x, core code doesn't care which major
 anthropic = "^0.40"
 openai = "^1.50"
@@ -59,7 +59,7 @@ optional = true
 [tool.poetry.group.ml.dependencies]
 spacy = "^3.8"          # Documentation Processing Agent NER/dependency pipeline
 scikit-learn = "^1.5"   # Usage Feedback Agent success-probability estimator
-xgboost = "^2.1"        # Version Coherence Agent conflict classifier
+xgboost = "^3.2"        # Version Coherence Agent conflict classifier
 
 [tool.poetry.group.observability]
 optional = true
