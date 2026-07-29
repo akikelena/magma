@@ -228,14 +228,14 @@ files = [
 
 [[package]]
 name = "anthropic"
-version = "0.116.0"
+version = "0.120.2"
 description = "The official Python library for the anthropic API"
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "anthropic-0.116.0-py3-none-any.whl", hash = "sha256:6c0a7698e8d652455da3499978279bb2588c7264d0a35be3666009a4258c8256"},
-    {file = "anthropic-0.116.0.tar.gz", hash = "sha256:5fc248fbb9fe03ef686f8a774f81586bca31a043260aab88b387ea3660f4a396"},
+    {file = "anthropic-0.120.2-py3-none-any.whl", hash = "sha256:0f0bc2b381dc0eb41c8d886b815d79c2041cd2374f83aed36f574b6dc9c579c1"},
+    {file = "anthropic-0.120.2.tar.gz", hash = "sha256:9722efc10c27a30a69f5338ddacdb35bc6a64297a4e4ba729bf83af873d5fb3a"},
 ]
 
 [package.dependencies]
@@ -249,10 +249,11 @@ sniffio = "*"
 typing-extensions = ">=4.14,<5"
 
 [package.extras]
-aiohttp = ["aiohttp", "httpx-aiohttp (>=0.1.9)"]
+aiohttp = ["aiohttp", "httpx-aiohttp (>=0.1.9,<1)"]
 aws = ["boto3 (>=1.28.57)", "botocore (>=1.31.57)"]
 bedrock = ["boto3 (>=1.28.57)", "botocore (>=1.31.57)"]
-mcp = ["mcp (>=1.0) ; python_version >= \"3.10\""]
+google-cloud = ["google-auth[requests] (>=2,<3)"]
+mcp = ["mcp (>=1.0,<3) ; python_version >= \"3.10\""]
 vertex = ["google-auth[requests] (>=2,<3)"]
 webhooks = ["standardwebhooks (>=1.0.1,<2)"]
 
@@ -633,7 +634,7 @@ files = [
 
 [package.dependencies]
 google-re2 = [
-    {version = ">=1.1.20240702", markers = "python_version != \"3.13\""},
+    {version = ">=1.1.20240702"},
     {version = ">=1.1.20250722", markers = "python_version == \"3.13\""},
 ]
 jmespath = ">=1.0.1"
@@ -2938,7 +2939,7 @@ description = "Python library for arbitrary-precision floating-point arithmetic"
 optional = false
 python-versions = "*"
 groups = ["crewai"]
-markers = "python_version != \"3.13\""
+markers = "python_version < \"3.13\""
 files = [
     {file = "mpmath-1.3.0-py3-none-any.whl", hash = "sha256:a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c"},
     {file = "mpmath-1.3.0.tar.gz", hash = "sha256:7a28eb2a9774d00c7bc92411c19a89209d5da7c4c9a9e227be8330a23a25b91f"},
@@ -3415,7 +3416,7 @@ description = "ONNX Runtime is a runtime accelerator for Machine Learning models
 optional = false
 python-versions = ">=3.10"
 groups = ["crewai"]
-markers = "python_version != \"3.13\""
+markers = "python_version < \"3.13\""
 files = [
     {file = "onnxruntime-1.24.3-cp311-cp311-macosx_14_0_arm64.whl", hash = "sha256:3e6456801c66b095c5cd68e690ca25db970ea5202bd0c5b84a2c3ef7731c5a3c"},
     {file = "onnxruntime-1.24.3-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:8b2ebc54c6d8281dccff78d4b06e47d4cf07535937584ab759448390a70f4978"},
@@ -5365,7 +5366,7 @@ description = "Python bindings to Rust's persistent data structures (rpds)"
 optional = false
 python-versions = ">=3.10"
 groups = ["crewai"]
-markers = "python_version != \"3.13\""
+markers = "python_version < \"3.13\""
 files = [
     {file = "rpds_py-0.30.0-cp310-cp310-macosx_10_12_x86_64.whl", hash = "sha256:679ae98e00c0e8d68a7fda324e16b90fd5260945b45d3b824c892cec9eea3288"},
     {file = "rpds_py-0.30.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:4cc2206b76b4f576934f0ed374b10d7ca5f457858b157ca52064bdfc26b9fc00"},
@@ -5618,7 +5619,7 @@ description = "A set of python modules for machine learning and data mining"
 optional = false
 python-versions = ">=3.10"
 groups = ["ml"]
-markers = "python_version != \"3.13\""
+markers = "python_version < \"3.13\""
 files = [
     {file = "scikit_learn-1.7.2-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:6b33579c10a3081d076ab403df4a4190da4f4432d443521674637677dc91e61f"},
     {file = "scikit_learn-1.7.2-cp310-cp310-macosx_12_0_arm64.whl", hash = "sha256:36749fb62b3d961b1ce4fedf08fa57a1986cd409eff2d783bca5d4b9b5fce51c"},
@@ -5733,7 +5734,7 @@ description = "Fundamental algorithms for scientific computing in Python"
 optional = false
 python-versions = ">=3.10"
 groups = ["ml"]
-markers = "python_version != \"3.13\""
+markers = "python_version < \"3.13\""
 files = [
     {file = "scipy-1.15.3-cp310-cp310-macosx_10_13_x86_64.whl", hash = "sha256:a345928c86d535060c9c2b25e71e87c39ab2f22fc96e9636bd74d1dbf9de448c"},
     {file = "scipy-1.15.3-cp310-cp310-macosx_12_0_arm64.whl", hash = "sha256:ad3432cb0f9ed87477a8d97f03b763fd1d57709f1bbde3c9369b1dff5503b253"},
@@ -6166,7 +6167,7 @@ description = "Manage dynamic plugins for Python applications"
 optional = false
 python-versions = ">=3.10"
 groups = ["dev"]
-markers = "python_version != \"3.13\""
+markers = "python_version < \"3.13\""
 files = [
     {file = "stevedore-5.8.0-py3-none-any.whl", hash = "sha256:88eede9e66ca80e34085b9174e2327da2c61ac91f24f70e41c3ad76e4bb4872b"},
     {file = "stevedore-5.8.0.tar.gz", hash = "sha256:b49867b32ca3016e94100e68dbf26e72aa7b8708d0a3f73c08aeb220370ac715"},
@@ -6192,7 +6193,7 @@ description = "Computer algebra system (CAS) in Python"
 optional = false
 python-versions = ">=3.9"
 groups = ["crewai"]
-markers = "python_version != \"3.13\""
+markers = "python_version < \"3.13\""
 files = [
     {file = "sympy-1.14.0-py3-none-any.whl", hash = "sha256:e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5"},
     {file = "sympy-1.14.0.tar.gz", hash = "sha256:d3d3fe8df1e5a0b42f0e7bdf50541697dbe7d23746e894990c030e2b05e72517"},
@@ -7195,4 +7196,4 @@ type = ["pytest-mypy (>=1.0.1) ; platform_python_implementation != \"PyPy\""]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10,<3.14"
-content-hash = "8c140e98f2f013e370bcac7b7a3c9c3c4586994653ec6a85f506d3e059195b65"
+content-hash = "369d018d6281c2fb6c5229975472f6d94a7c6f9d13bad11ac1d39878fb9c0731"
