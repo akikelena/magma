@@ -31,7 +31,7 @@ neo4j = "^5.0"
 weaviate-client = "^4.22"
 numpy = ">=1.26,<3.0"  # loose upper bound: spacy 3.8/thinc need numpy 2.x, core code doesn't care which major
 anthropic = "^0.116"
-openai = "^1.50"
+openai = "^2.52"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^9.1"
