@@ -1,0 +1,48 @@
+# Agent-specific configuration. Referenced by magma.core.utils.config.
+documentation_processing_agent:
+  model: null  # deterministic service, no LLM
+  ner_model: en_core_web_trf
+  topic_model: lda
+  supported_source_types: [html, markdown, openapi, rst]
+
+knowledge_repository_agent:
+  model: null  # deterministic service, no LLM
+  embedding_dimensions: 1024
+  similarity_threshold: 0.78  # calibrated by grid search, sensitivity +/-0.03
+
+change_detection_agent:
+  model: change_classifier
+  temperature: 0.0
+  confidence_threshold: 0.70  # below this, route to human review as an edge case
+  seed: 42
+
+version_coherence_agent:
+  model: null  # graph traversal + XGBoost, no LLM
+  conflict_score_threshold: 0.5
+  xgboost_model_path: models/version_coherence_xgb.json
+
+task_orchestration_agent:
+  model: null  # deterministic service
+  max_rework_iterations: 3
+
+prompt_generation_agent:
+  model: default
+  temperature: 0.0
+  seed: 42
+
+code_generation_agent:
+  model: default
+  temperature: 0.0
+  seed: 42
+  targeted_modification_line_threshold: 0.30  # <30% of template lines affected
+
+automated_validation_agent:
+  model: null  # deterministic service
+  max_rework_iterations: 3
+
+explainability_agent:
+  model: default
+  temperature: 0.0
+
+adaptive_learning_agent:
+  model: null  # supervised + contextual bandit, no chat LLM

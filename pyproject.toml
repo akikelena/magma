@@ -1,0 +1,86 @@
+[tool.poetry]
+name = "magma"
+version = "0.1.0"
+description = "Multi-Agent System for Automated Maintenance of Template-Based Code Generators"
+authors = ["Elena Akik"]
+readme = "README.md"
+license = "MIT"
+# Placeholder -- update to the repo's real GitHub URL once it's pushed.
+repository = "https://github.com/<your-username>/magma"
+homepage = "https://github.com/<your-username>/magma"
+keywords = ["multi-agent", "code-generation", "llm", "documentation", "crewai"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Code Generators",
+]
+packages = [{ include = "magma" }]
+
+[tool.poetry.scripts]
+magma = "magma.scripts.run_workflow:main"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.14"  # crewai (optional group) caps at <3.14; keeping the project range in sync avoids solver failures
+pyyaml = "^6.0"
+neo4j = "^5.0"
+weaviate-client = "^4.22"
+numpy = ">=1.26,<3.0"  # loose upper bound: spacy 3.8/thinc need numpy 2.x, core code doesn't care which major
+anthropic = "^0.116"
+openai = "^2.52"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.1"
+pytest-cov = "^7.1"
+mypy = "^2.3"
+black = "^26.5"
+flake8 = "^7.0"
+bandit = "^1.7"
+
+# Every group below is optional = true: each backend it installs is lazy-imported at its own
+# call site (AnthropicProvider, Neo4jGraphStore, HttpDocumentFetcher, crewai wiring, ...), so
+# the core test suite and CLI --demo path run without any of them installed. `poetry install`
+# with no --with flag intentionally skips all four; see CONTRIBUTING.md for which combination
+# of --with flags a given task needs.
+
+[tool.poetry.group.crewai]
+optional = true
+
+[tool.poetry.group.crewai.dependencies]
+crewai = "^1.15.12"
+
+[tool.poetry.group.ml]
+optional = true
+
+[tool.poetry.group.ml.dependencies]
+spacy = "^3.8"          # Documentation Processing Agent NER/dependency pipeline
+scikit-learn = "^1.5"   # Usage Feedback Agent success-probability estimator
+xgboost = "^3.2"        # Version Coherence Agent conflict classifier
+
+[tool.poetry.group.observability]
+optional = true
+
+[tool.poetry.group.observability.dependencies]
+prometheus-client = "^0.26"  # magma.core.utils.metrics; lazy-imported, falls back to a no-op without it
+
+[tool.poetry.group.web]
+optional = true
+
+[tool.poetry.group.web.dependencies]
+requests = "^2.32"  # magma.phase1_documentation_detection.document_source.HttpDocumentFetcher; lazy-imported
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+target-version = ["py310"]
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
