@@ -1092,14 +1092,14 @@ toml = ["tomli ; python_full_version <= \"3.11.0a6\""]
 
 [[package]]
 name = "crewai"
-version = "1.15.2"
+version = "1.15.12"
 description = "Cutting-edge framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks."
 optional = false
 python-versions = "<3.14,>=3.10"
 groups = ["crewai"]
 files = [
-    {file = "crewai-1.15.2-py3-none-any.whl", hash = "sha256:3e84f8ef873a2e4953ecd83368f22b99e2e2e1f58e11677a4c9f041560f666d7"},
-    {file = "crewai-1.15.2.tar.gz", hash = "sha256:deb2d882105cb9075cdd2198ac8398f9001315f2abc28d815fec66b003a2acbf"},
+    {file = "crewai-1.15.12-py3-none-any.whl", hash = "sha256:95cb41912c1d787f1778463c3384809b35564b69c733af527df087c4900ff4d2"},
+    {file = "crewai-1.15.12.tar.gz", hash = "sha256:17f3d63ab47ac6614e3561c3dfe2a73a7df917d0155e6ed2b501b0ee4a63d9da"},
 ]
 
 [package.dependencies]
@@ -1109,15 +1109,15 @@ appdirs = ">=1.4.4,<1.5.0"
 cel-python = ">=0.5.0,<0.6"
 chromadb = ">=1.1.0,<1.2.0"
 click = ">=8.1.7,<9"
-crewai-cli = "1.15.2"
-crewai-core = "1.15.2"
+crewai-cli = "1.15.12"
+crewai-core = "1.15.12"
 httpx = ">=0.28.1,<0.29.0"
 instructor = ">=1.3.3"
-json-repair = ">=0.25.2,<0.26.0"
+json-repair = ">=0.60.1,<0.61.0"
 json5 = ">=0.10.0,<0.11.0"
 jsonref = ">=1.1.0,<1.2.0"
 lancedb = ">=0.29.2,<0.30.1"
-mcp = ">=1.26.0,<1.27.0"
+mcp = ">=1.28.1,<1.29.0"
 openai = ">=2.30.0,<3"
 openpyxl = ">=3.1.5,<3.2.0"
 opentelemetry-api = ">=1.42.0,<1.43.0"
@@ -1126,7 +1126,7 @@ opentelemetry-sdk = ">=1.42.0,<1.43.0"
 pdfplumber = ">=0.11.4,<0.12.0"
 portalocker = ">=2.7.0,<2.8.0"
 pydantic = ">=2.11.9,<2.13"
-pydantic-settings = ">=2.10.1,<3"
+pydantic-settings = ">=2.14.2,<3"
 pyjwt = ">=2.13.0,<3"
 python-dotenv = ">=1.2.2,<2"
 pyyaml = ">=6.0,<7.0"
@@ -1138,9 +1138,9 @@ tomli-w = ">=1.1.0,<1.2.0"
 [package.extras]
 a2a = ["a2a-sdk (>=0.3.10,<0.4.0)", "aiocache[memcached,redis] (>=0.12.3,<0.13.0)", "httpx-auth (>=0.23.1,<0.24.0)", "httpx-sse (>=0.4.0,<0.5.0)"]
 anthropic = ["anthropic (>=0.73.0,<0.74.0)"]
-aws = ["aiobotocore (>=3.5.0,<3.6.0)", "boto3 (>=1.42.90,<1.43.0)"]
+aws = ["aiobotocore (>=3.8.0,<3.9.0)", "boto3 (>=1.43.46,<1.44.0)"]
 azure-ai-inference = ["azure-ai-inference (>=1.0.0b9,<1.1.0)", "azure-identity (>=1.17.0,<2)"]
-bedrock = ["aiobotocore (>=3.5.0,<3.6.0)", "boto3 (>=1.42.90,<1.43.0)"]
+bedrock = ["aiobotocore (>=3.8.0,<3.9.0)", "boto3 (>=1.43.46,<1.44.0)"]
 docling = ["docling (>=2.97.0,<2.98.0)", "docling-core[chunking] (>=2.74.1)"]
 embeddings = ["tiktoken (>=0.8.0,<0.13)"]
 file-processing = ["crewai-files"]
@@ -1151,32 +1151,32 @@ openpyxl = ["openpyxl (>=3.1.5,<3.2.0)"]
 pandas = ["pandas (>=2.2.3,<2.3.0)"]
 qdrant = ["qdrant-client[fastembed] (>=1.14.3,<1.15.0)"]
 qdrant-edge = ["qdrant-edge-py (>=0.6.0)"]
-tools = ["crewai-tools (==1.15.2)"]
+tools = ["crewai-tools (==1.15.12)"]
 voyageai = ["voyageai (>=0.3.5,<0.4.0)"]
 watson = ["ibm-watsonx-ai (>=1.3.39,<1.4.0)"]
 
 [[package]]
 name = "crewai-cli"
-version = "1.15.2"
+version = "1.15.12"
 description = "CLI for CrewAI — scaffold, run, deploy and manage AI agent crews."
 optional = false
 python-versions = "<3.14,>=3.10"
 groups = ["crewai"]
 files = [
-    {file = "crewai_cli-1.15.2-py3-none-any.whl", hash = "sha256:93ebe8ea734be793178737105897f60f3df0e8f114f27d523a28500c9c5946c4"},
-    {file = "crewai_cli-1.15.2.tar.gz", hash = "sha256:f11f31cdfd35817d8f5d4dcc29794c6374e6f89efd6188ae5f969b81f05cc1d1"},
+    {file = "crewai_cli-1.15.12-py3-none-any.whl", hash = "sha256:34c9ddf91ac4f65529af1f3e168c90d202181024719c07328d0b64c643ebaaa2"},
+    {file = "crewai_cli-1.15.12.tar.gz", hash = "sha256:ff21c43953ee1ae115463e451a97bd33be18756a2019e3d2554d73dbae9f409a"},
 ]
 
 [package.dependencies]
 appdirs = ">=1.4.4,<1.5.0"
 certifi = "*"
 click = ">=8.1.7,<9"
-crewai-core = "1.15.2"
+crewai-core = "1.15.12"
 cryptography = ">=42.0"
 httpx = ">=0.28.1,<0.29.0"
 packaging = ">=23.0"
 pydantic = ">=2.11.9,<2.13"
-pydantic-settings = ">=2.10.1,<2.11.0"
+pydantic-settings = ">=2.14.2,<3"
 pyjwt = ">=2.13.0,<3"
 python-dotenv = ">=1.2.2,<2"
 rich = ">=13.7.1"
@@ -1187,14 +1187,14 @@ uv = ">=0.11.6,<0.12.0"
 
 [[package]]
 name = "crewai-core"
-version = "1.15.2"
+version = "1.15.12"
 description = "Shared utilities for CrewAI — version, paths, user-data, telemetry, printer."
 optional = false
 python-versions = "<3.14,>=3.10"
 groups = ["crewai"]
 files = [
-    {file = "crewai_core-1.15.2-py3-none-any.whl", hash = "sha256:2f5cfa39396833c8451bf334a8e5f8d0c7c8f6a378bada148af5ff5713f9e858"},
-    {file = "crewai_core-1.15.2.tar.gz", hash = "sha256:43cecd3a4de8a781264fe882575065ab21688906ce400a29a2363c292e1387b1"},
+    {file = "crewai_core-1.15.12-py3-none-any.whl", hash = "sha256:b442ca30c0ccd06eb8ac660ad8f35124bba49b8c0abc0c654360594e25ca268f"},
+    {file = "crewai_core-1.15.12.tar.gz", hash = "sha256:7a9466b534995566c33d72a78e863197b09c33e1cb3bb8a0007cbd2550264250"},
 ]
 
 [package.dependencies]
@@ -2293,15 +2293,18 @@ drafts = ["pycryptodome"]
 
 [[package]]
 name = "json-repair"
-version = "0.25.2"
+version = "0.60.1"
 description = "A package to repair broken json strings"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.10"
 groups = ["crewai"]
 files = [
-    {file = "json_repair-0.25.2-py3-none-any.whl", hash = "sha256:51d67295c3184b6c41a3572689661c6128cef6cfc9fb04db63130709adfc5bf0"},
-    {file = "json_repair-0.25.2.tar.gz", hash = "sha256:161a56d7e6bbfd4cad3a614087e3e0dbd0e10d402dd20dc7db418432428cb32b"},
+    {file = "json_repair-0.60.1-py3-none-any.whl", hash = "sha256:ba6ff974f2a8bef2f7768144a7f03f870a816443f03da27a49cdd0ec31a78049"},
+    {file = "json_repair-0.60.1.tar.gz", hash = "sha256:841661cdd2df507c9a4e189097f38ca6bc372e06d4b4e36d72e590f68176c290"},
 ]
+
+[package.extras]
+schema = ["jsonschema (>=4.21) ; python_full_version < \"3.15.0a0\" or python_full_version >= \"3.15.0\"", "pydantic (>=2) ; python_full_version < \"3.15.0a0\" or python_full_version >= \"3.15.0\""]
 
 [[package]]
 name = "json5"
@@ -2743,28 +2746,28 @@ files = [
 
 [[package]]
 name = "mcp"
-version = "1.26.0"
+version = "1.28.1"
 description = "Model Context Protocol SDK"
 optional = false
 python-versions = ">=3.10"
 groups = ["crewai"]
 files = [
-    {file = "mcp-1.26.0-py3-none-any.whl", hash = "sha256:904a21c33c25aa98ddbeb47273033c435e595bbacfdb177f4bd87f6dceebe1ca"},
-    {file = "mcp-1.26.0.tar.gz", hash = "sha256:db6e2ef491eecc1a0d93711a76f28dec2e05999f93afd48795da1c1137142c66"},
+    {file = "mcp-1.28.1-py3-none-any.whl", hash = "sha256:2726bca5e7193f61c5dde8b12500a6de2d9acf6d1a1c0be9e8c2e706437991df"},
+    {file = "mcp-1.28.1.tar.gz", hash = "sha256:d51e36a5f5644faea4f85ea649bfffa6bc6c26770d42798ad6a3de3d2ba69683"},
 ]
 
 [package.dependencies]
 anyio = ">=4.5"
-httpx = ">=0.27.1"
+httpx = ">=0.27.1,<1.0.0"
 httpx-sse = ">=0.4"
 jsonschema = ">=4.20.0"
-pydantic = ">=2.11.0,<3.0.0"
+pydantic = {version = ">=2.11.0,<3.0.0", markers = "python_version < \"3.14\""}
 pydantic-settings = ">=2.5.2"
 pyjwt = {version = ">=2.10.1", extras = ["crypto"]}
 python-multipart = ">=0.0.9"
-pywin32 = {version = ">=310", markers = "sys_platform == \"win32\""}
+pywin32 = {version = ">=310", markers = "sys_platform == \"win32\" and python_version < \"3.14\""}
 sse-starlette = ">=1.6.1"
-starlette = ">=0.27"
+starlette = {version = ">=0.27", markers = "python_version < \"3.14\""}
 typing-extensions = ">=4.9.0"
 typing-inspection = ">=0.4.1"
 uvicorn = {version = ">=0.31.1", markers = "sys_platform != \"emscripten\""}
@@ -4802,14 +4805,14 @@ typing-extensions = ">=4.14.1"
 
 [[package]]
 name = "pydantic-settings"
-version = "2.10.1"
+version = "2.15.0"
 description = "Settings management using Pydantic"
 optional = false
-python-versions = ">=3.9"
+python-versions = ">=3.10"
 groups = ["crewai"]
 files = [
-    {file = "pydantic_settings-2.10.1-py3-none-any.whl", hash = "sha256:a60952460b99cf661dc25c29c0ef171721f98bfcb52ef8d9ea4c943d7c8cc796"},
-    {file = "pydantic_settings-2.10.1.tar.gz", hash = "sha256:06f0062169818d0f5524420a360d632d5857b83cffd4d42fe29597807a1614ee"},
+    {file = "pydantic_settings-2.15.0-py3-none-any.whl", hash = "sha256:0ba092c291c94baceb5eff768aa0d56400a457585bc0175925a5a5510303da42"},
+    {file = "pydantic_settings-2.15.0.tar.gz", hash = "sha256:694b793e84f766ba76a90ebdefc01d0a9a045dab0382bee70393da93712ad117"},
 ]
 
 [package.dependencies]
@@ -4818,7 +4821,7 @@ python-dotenv = ">=0.21.0"
 typing-inspection = ">=0.4.0"
 
 [package.extras]
-aws-secrets-manager = ["boto3 (>=1.35.0)", "boto3-stubs[secretsmanager]"]
+aws-secrets-manager = ["boto3 (>=1.35.0)"]
 azure-key-vault = ["azure-identity (>=1.16.0)", "azure-keyvault-secrets (>=4.8.0)"]
 gcp-secret-manager = ["google-cloud-secret-manager (>=2.23.1)"]
 toml = ["tomli (>=2.0.1)"]
@@ -5033,7 +5036,7 @@ description = "Python for Windows Extensions"
 optional = false
 python-versions = ">=3.9"
 groups = ["crewai"]
-markers = "platform_system == \"Windows\" or sys_platform == \"win32\""
+markers = "sys_platform == \"win32\" or platform_system == \"Windows\""
 files = [
     {file = "pywin32-312-cp310-cp310-win32.whl", hash = "sha256:772235332b5d1024c696f11cea1ae4be7930f0a8b894bb43db14e3f435f1ff7e"},
     {file = "pywin32-312-cp310-cp310-win_amd64.whl", hash = "sha256:5dbc35d2b5320dc07f25fa31269cfb767471002b17de5eb067d03da68c7cb2db"},
@@ -7196,4 +7199,4 @@ type = ["pytest-mypy (>=1.0.1) ; platform_python_implementation != \"PyPy\""]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10,<3.14"
-content-hash = "24e10c13dc7ae7c3b09bb4ac6c0b54b4b4c11141328fa83f19a2cb5f87d9575c"
+content-hash = "9a6a5b4dbb17d3cfadea5b9aa88b4e43b07b5073b7011705c2d9caefefa47c7e"
