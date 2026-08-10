@@ -65,7 +65,7 @@ xgboost = "^3.2"        # Version Coherence Agent conflict classifier
 optional = true
 
 [tool.poetry.group.observability.dependencies]
-prometheus-client = "^0.25"  # magma.core.utils.metrics; lazy-imported, falls back to a no-op without it
+prometheus-client = "^0.26"  # magma.core.utils.metrics; lazy-imported, falls back to a no-op without it
 
 [tool.poetry.group.web]
 optional = true
