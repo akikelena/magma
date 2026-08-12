@@ -13,7 +13,7 @@
 # do real work; the heavier "crewai" and "ml" groups (crewai, spacy,
 # scikit-learn, xgboost) stay opt-in -- see README's "Docker" section
 # for --build-arg EXTRAS.
-FROM python:3.13-slim AS builder
+FROM python:3.14-slim AS builder
 WORKDIR /build
 RUN pip install --no-cache-dir --upgrade pip
 
@@ -23,7 +23,7 @@ COPY magma ./magma
 ARG EXTRAS=""
 RUN pip install --no-cache-dir --prefix=/install . requests prometheus-client ${EXTRAS}
 
-FROM python:3.13-slim
+FROM python:3.14-slim
 
 RUN useradd --create-home --uid 1000 magma
 COPY --from=builder /install /usr/local
