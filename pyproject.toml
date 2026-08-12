@@ -51,7 +51,7 @@ bandit = "^1.7"
 optional = true
 
 [tool.poetry.group.crewai.dependencies]
-crewai = "^1.15.12"
+crewai = "^1.15.14"
 
 [tool.poetry.group.ml]
 optional = true
