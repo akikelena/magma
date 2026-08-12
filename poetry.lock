@@ -228,14 +228,14 @@ files = [
 
 [[package]]
 name = "anthropic"
-version = "0.116.0"
+version = "0.121.0"
 description = "The official Python library for the anthropic API"
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "anthropic-0.116.0-py3-none-any.whl", hash = "sha256:6c0a7698e8d652455da3499978279bb2588c7264d0a35be3666009a4258c8256"},
-    {file = "anthropic-0.116.0.tar.gz", hash = "sha256:5fc248fbb9fe03ef686f8a774f81586bca31a043260aab88b387ea3660f4a396"},
+    {file = "anthropic-0.121.0-py3-none-any.whl", hash = "sha256:6048713fa441e59e1cba8363171cd2a86273b25bd213e9c7ac70a523af88b011"},
+    {file = "anthropic-0.121.0.tar.gz", hash = "sha256:e79d6e08ab3376602fc9a70d4d5ea3540817c76cf7e16658bed790834e1833d6"},
 ]
 
 [package.dependencies]
@@ -245,14 +245,15 @@ docstring-parser = ">=0.15,<1"
 httpx = ">=0.25.0,<1"
 jiter = ">=0.4.0,<1"
 pydantic = ">=1.9.0,<3"
-sniffio = "*"
+sniffio = ">=1,<2"
 typing-extensions = ">=4.14,<5"
 
 [package.extras]
-aiohttp = ["aiohttp", "httpx-aiohttp (>=0.1.9)"]
-aws = ["boto3 (>=1.28.57)", "botocore (>=1.31.57)"]
-bedrock = ["boto3 (>=1.28.57)", "botocore (>=1.31.57)"]
-mcp = ["mcp (>=1.0) ; python_version >= \"3.10\""]
+aiohttp = ["aiohttp (>=3,<4)", "httpx-aiohttp (>=0.1.9,<1)"]
+aws = ["boto3 (>=1.28.57,<2)", "botocore (>=1.31.57,<2)"]
+bedrock = ["boto3 (>=1.28.57,<2)", "botocore (>=1.31.57,<2)"]
+google-cloud = ["google-auth[requests] (>=2,<3)"]
+mcp = ["mcp (>=1.0,<3) ; python_version >= \"3.10\""]
 vertex = ["google-auth[requests] (>=2,<3)"]
 webhooks = ["standardwebhooks (>=1.0.1,<2)"]
 
@@ -7261,4 +7262,4 @@ type = ["pytest-mypy (>=1.0.1) ; platform_python_implementation != \"PyPy\""]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10,<3.14"
-content-hash = "1ff3a36063df68dd844fdb4caa8aac5d9cf286e944140618227c4731c2052819"
+content-hash = "13cdea4bc87d1507583c8903b3072b272abaceddb540dc95ee0549c4af3ec1a4"
