@@ -38,7 +38,7 @@ pytest = "^9.1"
 pytest-cov = "^7.1"
 mypy = "^2.3"
 black = "^26.5"
-flake8 = "^7.0"
+flake8 = "^7.4"
 bandit = "^1.7"
 
 # Every group below is optional = true: each backend it installs is lazy-imported at its own
