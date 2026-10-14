@@ -37,7 +37,7 @@ openai = "^2.52"
 pytest = "^9.1"
 pytest-cov = "^7.1"
 mypy = "^2.3"
-black = "^26.5"
+black = "^26.10"
 flake8 = "^7.0"
 bandit = "^1.7"
 
